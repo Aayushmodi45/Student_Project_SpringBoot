@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <style>
+        /* Add some basic styling to make the page look better */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student List</h1>
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>MAIL</th>
+        <th>PASSWORD</th>
+        <th>MOBILE</th>
+    </tr>
+
+    <tr th:each="st : ${mylist}">
+        <td th:text="${st.name}"> </td>
+        <td th:text="${st.mail}"></td>
+        <td th:text="${st.pass}"> </td>
+        <td th:text="${st.mobile}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

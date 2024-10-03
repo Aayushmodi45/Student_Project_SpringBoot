@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Demo CRUD Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h3 {
+            color: #00698f;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+<h3>Welcome Authorized User</h3>
+<form name="f1" action="/studentdemo/curd">
+    <h4>CRUD Operations</h4>
+    <input type="submit" name="sub" value="SHOW">
+    <input type="submit" name="sub" value="DELETE">
+    <input type="submit" name="sub" value="UPDATE">
+    <input type="submit" name="sub" value="INSERT">
+</form>
+</body>
+</html>

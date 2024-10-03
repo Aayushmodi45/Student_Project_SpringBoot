@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER PAGE</title>
+    <style>
+        /* Add some basic styling to make the page look better */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #00698f;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        input[type="reset"] {
+            background-color: #FF3737;
+            color: #fff;
+        }
+        input[type="reset"]:hover {
+            background-color: #FF6961;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Register Here</h1>
+<form name="f2" action="/studentdemo/regme">
+    <label for="name">Enter Name:</label>
+    <input type="text" name="name" ><br>
+    <label for="mail">Enter Mail:</label>
+    <input type="text" name="mail" ><br>
+    <label for="pass">Enter Password:</label>
+    <input type="password" name="pass" ><br>
+    <label for="mobile">Enter Mobile:</label>
+    <input type="text" name="mobile" ><br>
+
+    <input type="submit" name="reg" value="REGISTER">
+    <input type="reset" name="cancel" value="CANCEL">
+</form>
+
+</body>
+</html>

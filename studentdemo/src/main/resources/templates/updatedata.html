@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATE MODULE</title>
+    <style>
+        /* Add some basic styling to make the page look better */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        input[type="reset"] {
+            background-color: #FF3737;
+            color: #fff;
+        }
+        input[type="reset"]:hover {
+            background-color: #FF6961;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Update Module</h2>
+<form name="f1" action="/studentdemo/upme">
+    <label for="mail">Select Mail:</label>
+    <select name="mail">
+        <option th:each="mail : ${stdup}" th:text="${mail}"></option>
+    </select>
+    <br><br>
+    <input type="submit" name="sub" value="UPDATE">
+    <input type="reset" name="res" value="CANCEL">
+</form>
+
+</body>
+</html>

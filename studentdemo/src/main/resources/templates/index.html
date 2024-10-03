@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+    <style>
+        /* Add some basic styling to make the page look better */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #00698f;
+            text-align: center;
+        }
+        h1:nth-child(2) {
+            font-size: 30pt;
+            color: red;
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to Home Page</h1>
+<h1 th:text="${msg}"></h1>
+<form name="f1" action="/studentdemo/reg">
+    <h4>Login/Register</h4>
+    <label for="mail">Enter Mail:</label>
+    <input type="text" name="mail" ><br>
+    <label for="pass">Enter Password:</label>
+    <input type="text" name="pass" ><br>
+    <input type="submit" name="sub" value="LOGIN">
+    <input type="submit" name="sub" value="REGISTER">
+</form>
+</body>
+</html>
